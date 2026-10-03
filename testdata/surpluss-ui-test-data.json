@@ -1,0 +1,19 @@
+{
+  "accounts": [
+    {
+      "role": "admin",
+      "email": "admin@catalogue.test",
+      "password": "Admin#2026"
+    },
+    {
+      "role": "staff",
+      "email": "staff@catalogue.test",
+      "password": "Staff#2026"
+    }
+  ],
+  "sourceCatalogue": {
+    "slug": "premium-corporate-essentials",
+    "name": "Premium corporate essentials",
+    "productIds": ["atlas-cabin", "studio-headphones"]
+  }
+}

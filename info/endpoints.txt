@@ -1,0 +1,27 @@
+There are 17 API route files in the project:
+
+Public
+
+GET /api/health — health check.
+GET /api/catalogues/[slug]/search — search products in a catalogue.
+POST /api/enquiries — submit a buyer enquiry.
+POST /api/newsletter — subscribe to newsletter.
+POST /api/uploads/presign — request a signed image-upload URL; requires sign-in.
+Authentication
+
+GET /api/auth/[...nextauth]
+POST /api/auth/[...nextauth]
+Admin
+
+GET /api/admin/search — portal search.
+GET /api/admin/categories — category lookup.
+GET /api/admin/products/search — product search.
+GET /api/admin/places/cities — city lookup/suggestions.
+GET /api/admin/catalogues/slug-check — check whether a catalogue slug is available.
+GET, PATCH /api/admin/catalogues/[id] — read or update a catalogue.
+POST /api/admin/catalogues/[id]/listings — add catalogue listings.
+PATCH, DELETE /api/admin/catalogues/[id]/listings/[listingId] — update or remove a listing.
+PUT /api/admin/catalogues/[id]/listings/order — reorder listings.
+GET, POST /api/admin/badge-presets — list or create badge presets.
+PATCH, DELETE /api/admin/badge-presets/[id] — update or delete a badge preset.
+Admin routes require sign-in. Some operations are intended to be admin-only, though the project has authorization gaps noted in the test plan. Product, stock, import, and lead mutations also use Next.js server actions, so they don’t appear in this REST endpoint list.

@@ -1,0 +1,12 @@
+{
+  "products": [
+    {
+      "fixtureId": "atlas-cabin",
+      "name": "Atlas cabin trolley"
+    },
+    {
+      "fixtureId": "studio-headphones",
+      "name": "Studio wireless headphones"
+    }
+  ]
+}

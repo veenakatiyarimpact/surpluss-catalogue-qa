@@ -1,0 +1,99 @@
+1. Vitest
+
+Vitest is a testing framework for JavaScript/TypeScript.
+
+Think of it as the JavaScript equivalent of tools such as JUnit/TestNG in Java.
+
+You use Vitest to write and execute automated tests.
+
+Example:
+
+import { describe, expect, it } from "vitest";
+
+describe("Calculator", () => {
+  it("should add two numbers", () => {
+    expect(2 + 3).toBe(5);
+  });
+});
+
+Here:
+
+describe() → groups related tests
+it() → defines one test case
+expect() → checks the actual result
+toBe(5) → verifies the expected value
+
+For your QA Automation background, you can think:
+
+Vitest ≈ TestNG/JUnit + JavaScript/TypeScript
+
+It is particularly popular with Vite, React, and modern TypeScript projects.
+
+2. Next.js
+
+Next.js is a web application framework built on top of React.
+
+It is used to build complete web applications, including:
+
+UI/frontend
+Server-side rendering
+API endpoints
+Routing
+Backend logic
+Authentication
+Database integration
+Server/client components
+
+For example, a project might look like:
+
+Next.js Application
+│
+├── app/
+│   ├── page.tsx
+│   ├── login/
+│   │   └── page.tsx
+│   └── api/
+│       └── users/
+│           └── route.ts
+│
+├── components/
+├── tests/
+└── package.json
+
+page.tsx can represent a webpage, while an API route can handle HTTP requests.
+
+Vitest vs Next.js
+	Vitest	Next.js
+What is it?	Testing framework	Web application framework
+Main purpose	Automated testing	Building web applications
+Language	JS/TS	JS/TS + React
+Similar to	JUnit/TestNG	Spring Boot + React combined conceptually
+Used by QA?	Yes	Tested by QA
+Example	Unit/API/component tests	Web application
+How they work together
+
+A Next.js application can use Vitest for testing.
+
+             Next.js Application
+                    │
+       ┌────────────┼────────────┐
+       │            │            │
+     React        API          Server
+       │            │            │
+       └────────────┼────────────┘
+                    │
+                 Vitest
+                    │
+              Automated Tests
+
+For your current Playwright/QA automation learning, an important distinction is:
+
+Next.js → application you are testing
+Vitest → usually tests code/components/functions at unit/component level
+Playwright → tests the application from the user's/browser perspective, including UI and API workflows
+
+So if you see a code snippet like the one you recently shared:
+
+import { describe, expect, it, vi } from "vitest";
+
+that's Vitest test code, and vi is Vitest's mocking utility.
